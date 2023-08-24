@@ -18,8 +18,6 @@ return new class extends Migration
             $table->date('fecha_devolucion');
             $table->unsignedBigInteger('libro_id');
             $table->unsignedBigInteger('usuario_id');
-            $table->foreign('libro_id')->references('id')->on('libros');
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
             $table->timestamps();
         });
     }
